@@ -4,5 +4,17 @@
   },
   "extensionDescription": {
     "message": "通过 EpubKit 将网页保存为 ePub 文件"
+  },
+  "launchTips": {
+    "message": "请先启动 EpubKit 软件"
+  },
+  "title": {
+    "message": "标题"
+  },
+  "save": {
+    "message": "保存"
+  },
+  "saved": {
+    "message": "已保存"
   }
 }

@@ -4,5 +4,17 @@
   },
   "extensionDescription": {
     "message": "Save web pages as ePub through EpubKit"
+  },
+  "launchTips": {
+    "message": "Please launch EpubKit app first"
+  },
+  "title": {
+    "message": "Title"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "saved": {
+    "message": "Saved"
   }
 }

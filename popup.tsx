@@ -4,6 +4,7 @@ import { Providers } from "~components/Providers"
 import logo from 'url:~assets/logo.png'
 import { useForm } from "react-hook-form"
 import cn from 'classnames'
+import { t } from "~utils"
 
 const PORT = 6143
 
@@ -123,18 +124,18 @@ function IndexPopup() {
 
           {saved ? <>
             <div className="text-xl text-center">
-              Saved!
+              {t("saved")}!
             </div>
           </> : <>
             {shouldLaunchApp ? <div className="text-center">
-              Please launch the EpubKit app first
+              {t("launchTips")}
             </div> : <>
               <form onSubmit={form.handleSubmit(values => {
                 saveMutation.mutate(values)
               })}>
                 <div className="space-y-3">
                   <label className="input input-bordered input-sm flex items-center gap-2">
-                    <span className=" text-base-content/60">Title</span>
+                    <span className=" text-base-content/60">{t("title")}</span>
                     <input autoFocus type="text" {...form.register("title")} className="grow" placeholder="text-base-content Page title" />
                   </label>
                   <select {...form.register("collectionId")} className="select select-bordered select-sm w-full">
@@ -150,7 +151,7 @@ function IndexPopup() {
                     <span className={cn({
                       "loading-spinner loading": saveMutation.isPending
                     })}></span>
-                    Save
+                    {t("save")}
                   </button>
                 </div>
               </form>
