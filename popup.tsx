@@ -70,9 +70,15 @@ function IndexPopup() {
         })
       })
 
-      const result = await response.json()
+      const status = response.status
 
-      return result
+      if (status !== 200) {
+        const result = await response.text()
+        throw new Error(result)
+      } else {
+        const result = await response.json()
+        return result
+      }
     },
     onSuccess() {
       setSaved(true)
