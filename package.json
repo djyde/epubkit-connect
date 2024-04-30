@@ -1,8 +1,8 @@
 {
   "name": "epubkit-connect",
-  "displayName": "Epubkit connect",
+  "displayName": "__MSG_extensionName__",
   "version": "0.0.1",
-  "description": "Save web page to EpubKit in your browser",
+  "description": "__MSG_extensionDescription__",
   "author": "Randy Lu",
   "scripts": {
     "dev": "plasmo dev",
@@ -31,6 +31,7 @@
     "typescript": "5.3.3"
   },
   "manifest": {
+    "default_locale": "en",
     "permissions": [
       "activeTab",
       "scripting"
